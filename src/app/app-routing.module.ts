@@ -3,7 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: 'heroes', loadChildren: () => import('./heroes/hero.module').then(mod => mod.HeroModule) }
+  { path: 'crisis-center', loadChildren: () => import('./crisis-center/crisis-center.module').then(mod => mod.CrisisCenterModule) },
+  { path: 'heroes', loadChildren: () => import('./heroes/hero.module').then(mod => mod.HeroModule) },
+  { path: '', redirectTo: '/heroes', pathMatch: 'full' }
 ];
 
 @NgModule({
