@@ -6,16 +6,22 @@ import { AppComponent } from './app.component';
 
 import { CrisisCenterModule } from './crisis-center/crisis-center.module';
 import { HeroModule } from './heroes/hero.module';
+import { AdminModule } from './admin/admin.module';
+import { LoginComponent } from './auth/login/login.component';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HeroModule,
     CrisisCenterModule,
-    HeroModule
+    AdminModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
